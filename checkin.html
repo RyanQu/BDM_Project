@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+    </head>
+    <body class="">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Edit Record</h4>
+                    </div>
+                    <div class="modal-body form-group">
+                        <table class="table table-bordered table-hover table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>ID type</th>
+                                    <th>ID</th>
+                                    <th>Room #</th>
+                                    <th>Date</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" placeholder="Passport"></td>
+                                    <td><input type="text" placeholder="100000"></td>
+                                    <td><input type="text" placeholder="503"></td>
+                                    <td><input type="text" placeholder="2017-04-29"></td>
+                                </tr>
+                                <tr>
+                                    <th>Price</th>
+                                    <th>Payment</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" placeholder="100"></td>
+                                    <td><input type="text" placeholder="Null"></td>
+                                    <td><input type="text" placeholder="Check in"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header navbar-left">
+                    <span class="navbar-brand nav-title">BDM Project Database System of Hotel</span>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav navbar-right nav-content">
+                        <li><a href="index.html">Room status</a></li>
+                        <li class="active"><a href="#">Check in</a></li>
+                        <li><a href="#">Event</a></li>
+                        <li><a href="#">Customer</a></li>
+                        <li><a href="#">Room</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="title">Check in Status</div>
+                <div class="description">
+                    <strong>Payment</strong>: null or paid.</br>
+                    <strong>Status</strong>: check in or over.</br>
+                    <button class="fa fa-plus">  Add a new Check in</button>: add new check in record.</br>
+                    <button class="fa fa-check"></button> : check payment and change status to 'over'.</br>
+                    <button class="fa fa-close"></button> : delete record.</br>
+                    <button class="fa fa-edit"></button> : edit record.</br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1" data-animation-effect="fadeIn">
+                    <div class="add">
+                        <button class="fa fa-plus">  Add a new Check in</button> 
+                    </div>
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID type</th>
+                                <th>ID</th>
+                                <th>Room #</th>
+                                <th>Date</th>
+                                <th>Price</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Passport</td>
+                                <td>100000</td>
+                                <td>503</td>
+                                <td>2017-04-29</td>
+                                <td>100</td>
+                                <td>Null</td>
+                                <td>Check in</td>
+                                <td>
+                                    <form action="">
+                                        <button class="fa fa-check"></button> 
+                                        <button class="fa fa-close"></button> 
+                                        <button class="fa fa-edit" data-toggle="modal" data-target="#myModal"></button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>D License</td>
+                                <td>100001</td>
+                                <td>502</td>
+                                <td>2017-04-10</td>
+                                <td>100</td>
+                                <td>Paid</td>
+                                <td>Over</td>
+                                <td>
+                                    <form action="">
+                                        <button class="fa fa-check"></button> 
+                                        <button class="fa fa-close"></button> 
+                                        <button class="fa fa-edit" data-toggle="modal" data-target="#myModal"></button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>SSN</td>
+                                <td>100002</td>
+                                <td>104</td>
+                                <td>2017-05-01</td>
+                                <td>100</td>
+                                <td>Paid</td>
+                                <td>Check in</td>
+                                <td>
+                                    <form action="">
+                                        <button class="fa fa-check"></button> 
+                                        <button class="fa fa-close"></button> 
+                                        <button class="fa fa-edit" data-toggle="modal" data-target="#myModal"></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery first, then Bootstrap JS. -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </body>
+</html>
