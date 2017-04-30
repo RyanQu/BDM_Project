@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+    </head>
+    <body class="">
+        <div class="modal fade" id="Modal_edit" tabindex="-1" role="dialog" aria-labelledby="ModalLabel_edit">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="ModalLabel_edit">Edit Record</h4>
+                    </div>
+                    <div class="modal-body form-group">
+                        <table class="table table-bordered table-hover table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>ID type</th>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Room #</th>
+                                    <th>Date</th>
+                                    <th>Event_id</th>
+                                </tr>
+                                <tr>
+                                    <td>Passport</td>
+                                    <td>100000</td>
+                                    <td>QY</td>
+                                    <td><input type="text" placeholder="503"></td>
+                                    <td><input type="text" placeholder="2017-04-29"></td>
+                                    <td><input type="text" placeholder="0"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header navbar-left">
+                    <span class="navbar-brand nav-title">BDM Project Database System of Hotel</span>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav navbar-right nav-content">
+                        <li><a href="index.html">Room status</a></li>
+                        <li><a href="checkin.html">Check in</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="customer.html">Customer</a></li>
+                        <li class="active"><a href="room.html">Room</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="title">Room type</div>
+                <div class="description">
+                    <strong>Max serve</strong>: max number of persons that can serve.</br>
+                    <strong>Price in & off</strong>: different price in in-season and off-season.</br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1" data-animation-effect="fadeIn">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Type_id</th>
+                                <th>Type</th>
+                                <th>Beds</th>
+                                <th>Bed size</th>
+                                <th>Max serve</th>
+                                <th>Price_in</th>
+                                <th>Price_off</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Single</td>
+                                <td>1</td>
+                                <td>Twin</td>
+                                <td>1</td>
+                                <td>100</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Double</td>
+                                <td>1</td>
+                                <td>Queen</td>
+                                <td>2</td>
+                                <td>120</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Large</td>
+                                <td>1</td>
+                                <td>King</td>
+                                <td>2</td>
+                                <td>140</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Standard</td>
+                                <td>2</td>
+                                <td>Twin</td>
+                                <td>2</td>
+                                <td>120</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Elegent</td>
+                                <td>2</td>
+                                <td>Queen</td>
+                                <td>4</td>
+                                <td>140</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Suit</td>
+                                <td>2</td>
+                                <td>King</td>
+                                <td>4</td>
+                                <td>180</td>
+                                <td>150</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery first, then Bootstrap JS. -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    </body>
+</html>

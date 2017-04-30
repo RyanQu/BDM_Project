@@ -17,43 +17,23 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Add Check in</h4>
+                        <h4 class="modal-title" id="myModalLabel">Add Event</h4>
                     </div>
                     <div class="modal-body form-group">
                         <table class="table table-bordered table-hover table-striped">
                             <tbody>
                                 <tr>
+                                    <th>Evnet_name</th>
                                     <th>ID type</th>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>Room #</th>
+                                    <th>Serve</th>
                                     <th>Date</th>
-                                    <th>Event_id</th>
                                 </tr>
                                 <tr>
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
-                                    <td><input type="text"></td>
-                                    <td><input type="text"></td>
-                                    <td><input type="text"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>Accompanying</p>
-                        <table class="table table-bordered table-hover table-striped">
-                            <tbody>
-                                <tr>
-                                    <th>ID type</th>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                </tr>
-                                <tr>
-                                    <td><input type="text"></td>
-                                    <td><input type="text"></td>
-                                    <td><input type="text"></td>
-                                </tr>
-                                <tr>
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
@@ -79,20 +59,20 @@
                         <table class="table table-bordered table-hover table-striped">
                             <tbody>
                                 <tr>
+                                    <th>Evnet_name</th>
                                     <th>ID type</th>
                                     <th>ID</th>
                                     <th>Name</th>
-                                    <th>Room #</th>
+                                    <th>Serve</th>
                                     <th>Date</th>
-                                    <th>Event_id</th>
                                 </tr>
                                 <tr>
+                                    <td><input type="text" placeholder="Wedding"></td>
                                     <td>Passport</td>
                                     <td>100000</td>
                                     <td>QY</td>
-                                    <td><input type="text" placeholder="503"></td>
+                                    <td><input type="text" placeholder="40"></td>
                                     <td><input type="text" placeholder="2017-04-29"></td>
-                                    <td><input type="text" placeholder="0"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -112,8 +92,8 @@
                 <div>
                     <ul class="nav navbar-nav navbar-right nav-content">
                         <li><a href="index.html">Room status</a></li>
-                        <li class="active"><a href="checkin.html">Check in</a></li>
-                        <li><a href="event.html">Event</a></li>
+                        <li><a href="checkin.html">Check in</a></li>
+                        <li class="active"><a href="event.html">Event</a></li>
                         <li><a href="customer.html">Customer</a></li>
                         <li><a href="room.html">Room</a></li>
                     </ul>
@@ -122,30 +102,31 @@
         </nav>
         <div class="container">
             <div class="row">
-                <div class="title">Check in Status</div>
+                <div class="title">Event Status</div>
                 <div class="description">
                     <strong>Payment</strong>: null or paid.</br>
-                    <strong>Status</strong>: check in or over.</br>
-                    <button class="fa fa-plus">  Add a new Check in</button>: add new check in record.</br>
+                    <strong>Status</strong>: null, start or over.</br>
+                    <strong>Serve</strong>: the total number of rooms.</br>
+                    <button class="fa fa-plus">  Add a new Event</button>: add new evnet record.</br>
                     <button class="fa fa-check"></button> : check payment and change to 'paid'.</br>
                     <button class="fa fa-close"></button> : change status to over and hide record.</br>
-                    <button class="fa fa-refresh"></button> : change room and date.</br>
+                    <button class="fa fa-refresh"></button> : edit record.</br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1" data-animation-effect="fadeIn">
                     <div class="add">
-                        <button class="fa fa-plus" data-toggle="modal" data-target="#Modal_add">  Add a new Check in</button> 
+                        <button class="fa fa-plus" data-toggle="modal" data-target="#Modal_add">  Add a new Event</button> 
                     </div>
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>log_id</th>
+                                <th>Event_id</th>
+                                <th>Evnet_name</th>
                                 <th>ID type</th>
                                 <th>ID</th>
-                                <th>Event_id</th>
                                 <th>Name</th>
-                                <th>Room #</th>
+                                <th>Serve</th>
                                 <th>Date</th>
                                 <th>Price</th>
                                 <th>Payment</th>
@@ -155,14 +136,14 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
+                                <td>1001</td>
+                                <td>Wedding</td>
                                 <td>Passport</td>
-                                <td>100000</td>
-                                <td>0</td>
-                                <td>QY</td>
-                                <td>503</td>
-                                <td>2017-04-29</td>
-                                <td>100</td>
+                                <td>10000</td>
+                                <td>LALALA</td>
+                                <td>20</td>
+                                <td>2017-04-05</td>
+                                <td>4000</td>
                                 <td>Null</td>
                                 <td>Check in</td>
                                 <td>
@@ -172,14 +153,14 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>2</td>
-                                <td>D License</td>
-                                <td>100001</td>
-                                <td>0</td>
-                                <td>GWT</td>
-                                <td>502</td>
-                                <td>2017-04-10</td>
-                                <td>100</td>
+                                <td>1002</td>
+                                <td>Meeting</td>
+                                <td>Passport</td>
+                                <td>10001</td>
+                                <td>HAHAHAH</td>
+                                <td>10</td>
+                                <td>2017-03-25</td>
+                                <td>1500</td>
                                 <td>Paid</td>
                                 <td>Over</td>
                                 <td>
@@ -189,16 +170,16 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td>1003</td>
+                                <td>Party</td>
                                 <td>SSN</td>
-                                <td>100002</td>
-                                <td>1</td>
-                                <td>MXL</td>
-                                <td>104</td>
-                                <td>2017-05-01</td>
-                                <td>100</td>
-                                <td>Paid</td>
-                                <td>Check in</td>
+                                <td>BDMSB250</td>
+                                <td>PAPAYA</td>
+                                <td>30</td>
+                                <td>2017-05-05</td>
+                                <td>4000</td>
+                                <td>Null</td>
+                                <td>Null</td>
                                 <td>
                                     <button class="fa fa-check"></button> 
                                     <button class="fa fa-close"></button> 
