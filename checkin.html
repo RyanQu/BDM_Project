@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="css/font-awesome.css">
     </head>
     <body class="">
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="Modal_edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -43,6 +43,48 @@
                                     <td><input type="text" placeholder="100"></td>
                                     <td><input type="text" placeholder="Null"></td>
                                     <td><input type="text" placeholder="Check in"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal_add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add Check in</h4>
+                    </div>
+                    <div class="modal-body form-group">
+                        <table class="table table-bordered table-hover table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>ID type</th>
+                                    <th>ID</th>
+                                    <th>Room #</th>
+                                    <th>Date</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <th>Price</th>
+                                    <th>Payment</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -85,7 +127,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1" data-animation-effect="fadeIn">
                     <div class="add">
-                        <button class="fa fa-plus">  Add a new Check in</button> 
+                        <button class="fa fa-plus" data-toggle="modal" data-target="#Modal_add">  Add a new Check in</button> 
                     </div>
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
@@ -113,7 +155,7 @@
                                     <form action="">
                                         <button class="fa fa-check"></button> 
                                         <button class="fa fa-close"></button> 
-                                        <button class="fa fa-edit" data-toggle="modal" data-target="#myModal"></button>
+                                        <button class="fa fa-edit" data-toggle="modal" data-target="#Modal_edit"></button>
                                     </form>
                                 </td>
                             </tr>
@@ -129,7 +171,7 @@
                                     <form action="">
                                         <button class="fa fa-check"></button> 
                                         <button class="fa fa-close"></button> 
-                                        <button class="fa fa-edit" data-toggle="modal" data-target="#myModal"></button>
+                                        <button class="fa fa-edit" data-toggle="modal" data-target="#Modal_edit"></button>
                                     </form>
                                 </td>
                             </tr>
@@ -145,7 +187,7 @@
                                     <form action="">
                                         <button class="fa fa-check"></button> 
                                         <button class="fa fa-close"></button> 
-                                        <button class="fa fa-edit" data-toggle="modal" data-target="#myModal"></button>
+                                        <button class="fa fa-edit" data-toggle="modal" data-target="#Modal_edit"></button>
                                     </form>
                                 </td>
                             </tr>
