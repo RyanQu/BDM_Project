@@ -12,48 +12,6 @@
         <link rel="stylesheet" href="css/font-awesome.css">
     </head>
     <body class="">
-        <div class="modal fade" id="Modal_edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Edit Record</h4>
-                    </div>
-                    <div class="modal-body form-group">
-                        <table class="table table-bordered table-hover table-striped">
-                            <tbody>
-                                <tr>
-                                    <th>ID type</th>
-                                    <th>ID</th>
-                                    <th>Room #</th>
-                                    <th>Date</th>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" placeholder="Passport"></td>
-                                    <td><input type="text" placeholder="100000"></td>
-                                    <td><input type="text" placeholder="503"></td>
-                                    <td><input type="text" placeholder="2017-04-29"></td>
-                                </tr>
-                                <tr>
-                                    <th>Price</th>
-                                    <th>Payment</th>
-                                    <th>Status</th>
-                                </tr>
-                                <tr>
-                                    <td><input type="text" placeholder="100"></td>
-                                    <td><input type="text" placeholder="Null"></td>
-                                    <td><input type="text" placeholder="Check in"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="modal fade" id="Modal_add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
@@ -67,6 +25,7 @@
                                 <tr>
                                     <th>ID type</th>
                                     <th>ID</th>
+                                    <th>Name</th>
                                     <th>Room #</th>
                                     <th>Date</th>
                                 </tr>
@@ -75,16 +34,61 @@
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Accompanying</p>
+                        <table class="table table-bordered table-hover table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>ID type</th>
+                                    <th>ID</th>
+                                    <th>Name</th>
                                 </tr>
                                 <tr>
-                                    <th>Price</th>
-                                    <th>Payment</th>
-                                    <th>Status</th>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
+                                    <td><input type="text"></td>
                                 </tr>
                                 <tr>
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
                                     <td><input type="text"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Modal_edit" tabindex="-1" role="dialog" aria-labelledby="ModalLabel_edit">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="ModalLabel_edit">Edit Record</h4>
+                    </div>
+                    <div class="modal-body form-group">
+                        <table class="table table-bordered table-hover table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>ID type</th>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Room #</th>
+                                    <th>Date</th>
+                                </tr>
+                                <tr>
+                                    <td>Passport</td>
+                                    <td>100000</td>
+                                    <td>QY</td>
+                                    <td><input type="text" placeholder="503"></td>
+                                    <td><input type="text" placeholder="2017-04-29"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -119,9 +123,9 @@
                     <strong>Payment</strong>: null or paid.</br>
                     <strong>Status</strong>: check in or over.</br>
                     <button class="fa fa-plus">  Add a new Check in</button>: add new check in record.</br>
-                    <button class="fa fa-check"></button> : check payment and change status to 'over'.</br>
-                    <button class="fa fa-close"></button> : delete record.</br>
-                    <button class="fa fa-edit"></button> : edit record.</br>
+                    <button class="fa fa-check"></button> : check payment and change to 'paid'.</br>
+                    <button class="fa fa-close"></button> : change status to over and hide record.</br>
+                    <button class="fa fa-refresh"></button> : change room and date.</br>
                 </div>
             </div>
             <div class="row">
@@ -134,6 +138,7 @@
                             <tr>
                                 <th>ID type</th>
                                 <th>ID</th>
+                                <th>Name</th>
                                 <th>Room #</th>
                                 <th>Date</th>
                                 <th>Price</th>
@@ -146,49 +151,46 @@
                             <tr>
                                 <td>Passport</td>
                                 <td>100000</td>
+                                <td>QY</td>
                                 <td>503</td>
                                 <td>2017-04-29</td>
                                 <td>100</td>
                                 <td>Null</td>
                                 <td>Check in</td>
                                 <td>
-                                    <form action="">
-                                        <button class="fa fa-check"></button> 
-                                        <button class="fa fa-close"></button> 
-                                        <button class="fa fa-edit" data-toggle="modal" data-target="#Modal_edit"></button>
-                                    </form>
+                                    <button class="fa fa-check"></button> 
+                                    <button class="fa fa-close"></button> 
+                                    <button class="fa fa-refresh" data-toggle="modal" data-target="#Modal_edit"></button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>D License</td>
                                 <td>100001</td>
+                                <td>GWT</td>
                                 <td>502</td>
                                 <td>2017-04-10</td>
                                 <td>100</td>
                                 <td>Paid</td>
                                 <td>Over</td>
                                 <td>
-                                    <form action="">
-                                        <button class="fa fa-check"></button> 
-                                        <button class="fa fa-close"></button> 
-                                        <button class="fa fa-edit" data-toggle="modal" data-target="#Modal_edit"></button>
-                                    </form>
+                                    <button class="fa fa-check"></button> 
+                                    <button class="fa fa-close"></button> 
+                                    <button class="fa fa-refresh" data-toggle="modal" data-target="#Modal_edit"></button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>SSN</td>
                                 <td>100002</td>
+                                <td>MXL</td>
                                 <td>104</td>
                                 <td>2017-05-01</td>
                                 <td>100</td>
                                 <td>Paid</td>
                                 <td>Check in</td>
                                 <td>
-                                    <form action="">
-                                        <button class="fa fa-check"></button> 
-                                        <button class="fa fa-close"></button> 
-                                        <button class="fa fa-edit" data-toggle="modal" data-target="#Modal_edit"></button>
-                                    </form>
+                                    <button class="fa fa-check"></button> 
+                                    <button class="fa fa-close"></button> 
+                                    <button class="fa fa-refresh" data-toggle="modal" data-target="#Modal_edit"></button>
                                 </td>
                             </tr>
                         </tbody>
